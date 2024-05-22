@@ -7,6 +7,8 @@ import distro
 from rich.console import Console
 from rich.markdown import Markdown
 
+CONFIG_PATH = os.path.expanduser('~/.plotshrc')
+
 
 console = Console()
 
@@ -15,16 +17,30 @@ def clear_terminal():
     # Clears the terminal window
     os.system('cls' if os.name == 'nt' else 'clear')
 
-def get_key():
+def get_config():
+    """Retrieve the API key and model from the config file."""
     config = configparser.ConfigParser()
-    config.read(os.path.expanduser('~/.plotshrc'))
-    return config.get('DEFAULT', 'api_key', fallback=None)
+    config.read(CONFIG_PATH)
+    api_key = config.get('DEFAULT', 'api_key', fallback=None)
+    model = config.get('DEFAULT', 'model', fallback='gpt-4')  # Default to gpt-4 if not set
+    return api_key, model
 
 def set_key(api_key):
+    """Set the API key in the config file."""
     config = configparser.ConfigParser()
-    config['DEFAULT'] = {'api_key': api_key}
-    with open(os.path.expanduser('~/.plotshrc'), 'w') as configfile:
+    config.read(CONFIG_PATH)
+    config['DEFAULT']['api_key'] = api_key
+    with open(CONFIG_PATH, 'w') as configfile:
         config.write(configfile)
+
+def set_model(model):
+    """Set the GPT model in the config file."""
+    config = configparser.ConfigParser()
+    config.read(CONFIG_PATH)
+    config['DEFAULT']['model'] = model
+    with open(CONFIG_PATH, 'w') as configfile:
+        config.write(configfile)
+
 
 def ask_ai(prompt, api_key, model="gpt-4"):
     # Dummy implementation for now
@@ -55,13 +71,12 @@ def ask_ai(prompt, api_key, model="gpt-4"):
                 print(chunk.choices[0].delta.content, end="")
                 full_response += chunk.choices[0].delta.content
         
-        clear_terminal()
-
+        #clear_terminal()
         # Once all content is received, render it as Markdown
-        if full_response:
-            console.print("Formatted response:")
-            md = Markdown(full_response)
-            console.print(md)
+        # if full_response:
+        #     console.print("Formatted response:")
+        #     md = Markdown(full_response)
+        #     console.print(md)
 
 
     except Exception as e:
