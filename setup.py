@@ -5,11 +5,15 @@ setup(
     version='0.1.0',
     packages=find_packages(),
     install_requires=[
-        'configparser'
+        'openai',
+        'configparser',
+        'distro',
+        'rich'
+       
     ],
     entry_points={
         'console_scripts': [
-            'plot=plotsh.main:main'
+            'plot=plot.main:main'
         ]
     },
     author='Your Name',

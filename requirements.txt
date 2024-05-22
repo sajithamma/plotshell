@@ -1,1 +1,4 @@
+distro
 configparser
+openai
+rich
