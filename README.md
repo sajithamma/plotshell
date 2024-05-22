@@ -50,6 +50,9 @@ To use Plot, simply type `plot` followed by the command or query you need help w
 plot how to setup nginx
 ```
 
+<img src="screenshots/demo.jpg" alt="Plot Usage Demo" width="880">
+
+
 ### Examples
 
 Here are a few examples of how you can use Plot to get help with common DevOps tasks:
