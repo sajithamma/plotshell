@@ -14,7 +14,7 @@
 To install Plot, simply use pip. Ensure you have Python 3.6 or later installed.
 
 ```bash
-pip install plotsh
+pip install plotshell
 ```
 
 ## Configuration 🔧

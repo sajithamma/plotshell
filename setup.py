@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='plotsh',
+    name='plotshell',
     version='0.1.0',
     packages=find_packages(),
     install_requires=[
@@ -16,8 +16,8 @@ setup(
             'plot=plot.main:main'
         ]
     },
-    author='Your Name',
-    author_email='your.email@example.com',
+    author='Sajith Amma',
+    author_email='sajith@tshaped.in',
     description='AI helper for DevOps using OpenAI.',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
