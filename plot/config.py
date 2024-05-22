@@ -71,6 +71,10 @@ def ask_ai(prompt, api_key, model="gpt-4"):
                 print(chunk.choices[0].delta.content, end="")
                 full_response += chunk.choices[0].delta.content
         
+        # Ensure the terminal prompt starts on a new line
+        print() # This will print a newline character
+
+        
         #clear_terminal()
         # Once all content is received, render it as Markdown
         # if full_response:
