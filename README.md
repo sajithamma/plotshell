@@ -1,9 +1,10 @@
 
 # Plot: AI Helper for DevOps
 
-🚀 Plot is a powerful command-line tool designed to provide immediate assistance to DevOps professionals. It leverages the capabilities of OpenAI's GPT models to deliver precise command guidance tailored to various operating systems and environments.
+<img src="screenshots/product-brand.jpg" alt="Plot Usage Example" width="880">
 
-<img src="screenshots/plot.gif" alt="Plot Usage Example" width="880">
+
+🚀 Plot is a powerful command-line tool designed to provide immediate assistance to DevOps professionals. It leverages the capabilities of OpenAI's GPT models to deliver precise command guidance tailored to various operating systems and environments.
 
 
 ## Features 🌟
@@ -11,6 +12,8 @@
 - **Streamlined Command Assistance**: Get specific commands for your operating system without unnecessary clutter.
 - **Support for Multiple GPT Models**: Choose between different GPT models like GPT-4 for tailored assistance.
 - **Easy Configuration**: Simple commands to set your API key and preferred GPT model.
+
+<img src="screenshots/plot.gif" alt="Plot Usage Example" width="880">
 
 ## Installation 🛠️
 
